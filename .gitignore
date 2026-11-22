@@ -1,0 +1,25 @@
+
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Secret environment files
+.env
+.env.*
+!.env.example
+
+# VS Code and IDE settings
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log

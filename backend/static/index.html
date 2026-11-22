@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Travel Chennai</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="map-bg">
+
+        <!-- CURVED ROUTE -->
+        <svg class="route-svg" viewBox="0 0 400 200">
+            <path d="M40 100
+               C120 20, 200 180, 280 100
+               S360 180, 380 100" fill="none" stroke="#1f2937" stroke-width="3" stroke-dasharray="6 6" />
+        </svg>
+
+        <!-- BUS -->
+        <div id="bus" class="bus"></div>
+
+        <!-- GLASS CHAT CARD -->
+        <div class="chat-container">
+            <h2>🚍 Smart Travel Chennai</h2>
+
+            <div id="chat-box">
+                <div class="message bot">
+                    Ask me something like:<br>
+                    <i>How can I go from Tambaram to T Nagar?</i>
+                </div>
+            </div>
+
+
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Ask about travel in Chennai..." />
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

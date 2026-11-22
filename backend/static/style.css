@@ -1,0 +1,176 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* MAP BACKGROUND */
+.map-bg {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("Pirate-Map-Images-08028.jpg");
+    background-size: contain;
+    /* 🔑 */
+    background-repeat: repeat;
+    /* 🔑 */
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ROUTE SVG */
+.route-svg {
+    position: absolute;
+    width: 420px;
+    height: 220px;
+    pointer-events: none;
+}
+
+/* BUS */
+.bus {
+    position: absolute;
+    font-size: 28px;
+    z-index: 5;
+
+    offset-path: path("M40 100 
+ C120 20, 200 180, 280 100 S360 180, 460 100"
+);
+
+    offset-rotate: auto;
+    offset-distance: 0%;
+    transition: offset-distance 5s linear;
+}
+
+
+/* GLASS CHAT CONTAINER */
+.chat-container {
+    width: 420px;
+    height: 560px;
+
+    /* TRUE GLASS EFFECT */
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
+
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
+
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes moveBus {
+    from {
+        offset-distance: 0%;
+    }
+
+    to {
+        offset-distance: 100%;
+    }
+}
+
+.bus {
+    position: absolute;
+    font-size: 28px;
+    z-index: 5;
+
+    offset-path: path("M40 100
+ C120 20, 200 180, 280 100 S360 180, 460 100"
+);
+
+    offset-rotate: auto;
+    animation: moveBus 6s linear infinite;
+}
+
+
+
+
+/* TITLE */
+.chat-container h2 {
+    text-align: center;
+    margin: 5px 0 10px;
+}
+
+/* CHAT AREA */
+#chat-box {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+/* CHAT BUBBLES */
+.message {
+    max-width: 75%;
+    padding: 10px 12px;
+    margin: 8px 0;
+    border-radius: 14px;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+/* USER MESSAGE */
+.user {
+    align-self: flex-end;
+    background: #7a4a2e;
+    /* warm brown */
+    color: #fff8ee;
+    /* parchment white */
+    padding: 10px 14px;
+    border-radius: 16px 16px 4px 16px;
+    margin: 6px 0;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+}
+
+/* BOT MESSAGE */
+.bot {
+    align-self: flex-start;
+    background: #f3e6cf;
+    /* beige parchment */
+    color: #3b2a1a;
+    /* dark brown text */
+    padding: 12px 14px;
+    border-radius: 16px 16px 16px 4px;
+    margin: 6px 0;
+    max-width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* INPUT AREA */
+.input-area {
+    display: flex;
+    gap: 6px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.input-area button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* MESSAGE ANIMATION */
+.message {
+    animation: fadeInUp 0.35s ease-out;
+}
